@@ -1,5 +1,27 @@
+<script>
+	// JQuery library is added using a link to an external library.  
+</script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
 <body>
-	This is my first GitHub file.
-	I can makes changes.
+	<div id="div1">This is my first GitHub file.</div>
+	<div id="div2" class="class1">I can makes changes.</div>
 </body>
+<script>
+	//notice the difference in how jquery changes the properties of an element compared to javascript:
+	//Javascript
+	document.getElementById("div1").innerHTML = "This was changed, like assigning a variable";
+	$("#div2").html("This was changed using function parameters");
+	//notice the use of the selector "$()" and the contents of the selector indicate what to change.
 	
+	// JQuery has options for far more selections than just IDs
+	// You can use any element, and ALL of the elements of the same type are changed.
+	$("div").css("color","red");
+	
+	// You can specificy a class using the .  and all of the classes with the same name will be changed.
+	$(".class1").css("background-color","blue");
+	
+	// You can combine classes, id's and element names to get more specific
+	$("div.class1").html("Only div's that have a 'class1' property will be changed");
+	
+</script>
